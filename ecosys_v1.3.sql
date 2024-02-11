@@ -73,7 +73,7 @@ CREATE TABLE `produto` (
   PRIMARY KEY (`id`),
   KEY `anuncio_id` (`anuncio_id`),
   KEY `categoria_id` (`categoria_id`),
-  CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION,
+  CONSTRAINT `produto_ibfk_1` FOREIGN KEY (`anuncio_id`) REFERENCES `anuncio` (`id`) ON UPDATE NO ACTION ON DELETE CASCADE,
   CONSTRAINT `produto_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`) ON UPDATE NO ACTION ON DELETE NO ACTION
 );
 
